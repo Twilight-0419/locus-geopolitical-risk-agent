@@ -16,10 +16,6 @@
 
 </div>
 
-> [!IMPORTANT]
-> - 本项目由团队在与 AI 的持续沟通中完成，AI 在架构设计、代码实现、测试和文档整理等环节提供了辅助。
-> - 受经费限制，线上系统所依赖的 API 已于 **2026-11-11** 停止使用。在线页面可能仅展示本地预览，完整功能和交互效果请观看[演示视频](https://www.bilibili.com/video/BV1LfHV6dE8A/)。
-
 <img src="docs/screenshots/locus-home.png" alt="Locus 产品首页" width="100%" />
 
 ## 作品集导览
@@ -44,15 +40,43 @@ Locus 当前聚焦 EV / 电池供应链，重点解决三个问题：
 
 Locus 是决策支持工具，不替代法律、海关或投资尽调结论。
 
+补充说明：
+
+- 本项目由团队在与 AI 的持续沟通中完成，AI 在架构设计、代码实现、测试和文档整理等环节提供了辅助。
+- 受经费限制，线上系统所依赖的 API 已于 **2026-11-11** 停止使用。在线页面可能仅展示本地预览，完整功能和交互效果请观看[演示视频](https://www.bilibili.com/video/BV1LfHV6dE8A/)。
+
+## 我的贡献
+
+我在项目中主要参与产品定义、核心 Agent 流程、工程实现和最终交付：
+
+- **产品需求与流程落地**：将 PM、Review 和用户体验反馈拆解为可执行任务，推动企业画像、风险评估、情景推演、咨询对话和最终报告形成完整链路。
+- **Scenario / Chat 核心闭环**：参与设计五档评分 Rubric、五维评分拆解、证据引用、置信度降级、结构化信息补充、历史版本和重新推演机制。
+- **Agent 与后端工程**：参与 FastAPI 多 Agent 工作流、RAG 证据检索、结构化输出、后台任务、刷新续接、历史评估恢复、SQLite 并发处理和 PDF 缓存等工作。
+- **交互与报告体验**：改进分析任务后台运行提示、历史决策入口、证据链接空值保护、中文枚举映射、Markdown 渲染和 PDF 管理层报告排版。
+- **部署、测试与交付**：完成 Netlify + Render 部署与联调，处理服务唤醒、环境变量、限流和稳定性问题，并整理测试、运行文档、演示视频与比赛提交材料。
+
+## 产品运行示例
+
+以下截图来自提交包中的运行示例，展示从决策输入到情景比较和咨询对话的主要界面。
+
+<table>
+  <tr>
+    <td width="50%"><strong>企业画像与决策输入</strong><br /><img src="docs/screenshots/locus-input.png" alt="企业画像与决策输入" /></td>
+    <td width="50%"><strong>证据评估与企业情报</strong><br /><img src="docs/screenshots/locus-assessment.png" alt="证据评估与企业情报" /></td>
+  </tr>
+  <tr>
+    <td width="50%"><strong>多情景与五维评分</strong><br /><img src="docs/screenshots/locus-scenarios.png" alt="多情景与五维评分" /></td>
+    <td width="50%"><strong>咨询对话与信息补充</strong><br /><img src="docs/screenshots/locus-chat.png" alt="咨询对话与信息补充" /></td>
+  </tr>
+</table>
+
 ## 在线系统
 
-- 产品页面：<https://georisk-locus.netlify.app>
-- 后端健康检查：<https://georisk-agent.onrender.com/health>
-- API 文档：<https://georisk-agent.onrender.com/docs>
+- 比赛期间前端：<https://georisk-locus.netlify.app>
+- 演示视频：<https://www.bilibili.com/video/BV1LfHV6dE8A/>
+- 后端 API：已于 2026-11-11 停止使用
 
-Render 免费实例会在闲置后休眠。第一次访问可能需要约 30 至 60 秒唤醒后端。在线页面不需要用户填写 API Key，模型凭证只配置在服务端环境变量中。
-
-前端会为休眠中的 Render 实例保留最多 90 秒的自动唤醒时间，并通过定时健康检查尽力保持服务在线。直接打开 Netlify 正式页面即可连接后端，不需要额外配置。
+比赛期间系统采用 Netlify 静态前端与 Render FastAPI 后端部署。线上 API 停用后，仓库中的本地运行说明、Mock 模式和 DeepSeek 配置仍然可以用于复现完整流程。
 
 ## 产品流程
 
