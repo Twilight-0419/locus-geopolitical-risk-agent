@@ -6,7 +6,7 @@
 
 面向制造业供应链负责人的 AI 决策支持 Agent。将政策证据、风险判断、情景推演、咨询补充与管理层报告串成一条可追溯的工作流。
 
-[在线演示](https://georisk-locus.netlify.app) · [演示视频](https://www.bilibili.com/video/BV1LfHV6dE8A/) · [API 文档](https://georisk-agent.onrender.com/docs) · [工作流说明](docs/workflow.md) · [示例输入](docs/examples/sample-input.json)
+[演示视频](https://www.bilibili.com/video/BV1LfHV6dE8A/) · [在线界面（API 已停用）](https://georisk-locus.netlify.app) · [API 文档](https://georisk-agent.onrender.com/docs) · [工作流说明](docs/workflow.md) · [示例输入](docs/examples/sample-input.json)
 
 ![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)
@@ -15,6 +15,10 @@
 ![SQLite](https://img.shields.io/badge/SQLite-FTS5-003B57?logo=sqlite&logoColor=white)
 
 </div>
+
+> [!IMPORTANT]
+> - 本项目由团队在与 AI 的持续沟通中完成，AI 在架构设计、代码实现、测试和文档整理等环节提供了辅助。
+> - 受经费限制，线上系统所依赖的 API 已于 **2026-11-11** 停止使用。在线页面可能仅展示本地预览，完整功能和交互效果请观看[演示视频](https://www.bilibili.com/video/BV1LfHV6dE8A/)。
 
 <img src="docs/screenshots/locus-home.png" alt="Locus 产品首页" width="100%" />
 
