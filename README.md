@@ -1,8 +1,38 @@
+<div align="center">
+
 # Locus
 
-Locus 是面向制造业供应链负责人的地缘政治供应链决策 Agent。系统将企业画像、政策与行业证据、风险判断、情景推演、咨询对话和最终决策报告串成一条可追溯的工作流，用于比较维持现有布局、提高中国生产占比、区域迁移和多国混合布局等方案。
+### 地缘政治供应链风险，转化为可执行的决策
 
-当前聚焦 EV / 电池供应链，重点解决三个问题：
+面向制造业供应链负责人的 AI 决策支持 Agent。将政策证据、风险判断、情景推演、咨询补充与管理层报告串成一条可追溯的工作流。
+
+[在线演示](https://georisk-locus.netlify.app) · [演示视频](https://www.bilibili.com/video/BV1LfHV6dE8A/) · [API 文档](https://georisk-agent.onrender.com/docs) · [工作流说明](docs/workflow.md) · [示例输入](docs/examples/sample-input.json)
+
+![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
+![DeepSeek](https://img.shields.io/badge/DeepSeek-Agent-4D6BFE)
+![SQLite](https://img.shields.io/badge/SQLite-FTS5-003B57?logo=sqlite&logoColor=white)
+
+</div>
+
+<img src="docs/screenshots/locus-home.png" alt="Locus 产品首页" width="100%" />
+
+## 作品集导览
+
+| 展示重点 | 实现 |
+| --- | --- |
+| **Agentic Workflow** | Profile、Research、Risk、Scenario、Advisor、Verification 六阶段协同，后台任务可持久运行并支持刷新后续接。 |
+| **Evidence-grounded RAG** | 组合 SQLite FTS5、metadata filtering、query enhancement 与 authority ranking；证据绑定来源、日期、权威等级和可点击原文。 |
+| **可解释情景推演** | 使用五维评分与五档 Rubric 比较成本、韧性、地缘风险、市场准入和落地可行性，并保留证据、假设与置信度。 |
+| **闭环咨询与版本** | 将对话中的新信息结构化，更新企业画像和缺口，重新推演情景并保存历史快照。 |
+| **管理层报告** | 通过 Report Composer 生成五段式 PDF，将证据与打分明细收纳到附录。 |
+
+> 不是“让模型写一段分析”，而是把检索、判断、推演、追问、版本和报告组织成一条可复核的决策链。
+
+## 项目概览
+
+Locus 当前聚焦 EV / 电池供应链，重点解决三个问题：
 
 - 将分散在政策、贸易数据、公司披露和行业报告中的证据整理成可引用的事实。
 - 将成本、供应链韧性、地缘政治风险、市场准入和落地可行性放在同一评分框架下比较。
@@ -324,3 +354,7 @@ $env:LLM_REQUIRED = "false"
 - 生产地点产能、分厂利用率和市场销量需要用户补充。
 - Render 免费实例存在冷启动等待。
 - PDF 和长对话请求需要更长的网络等待时间。
+
+## 关于此展示仓库
+
+本仓库是团队竞赛项目的个人展示 Fork，完整保留系统实现、运行说明和复现材料，用于展示 Agentic AI 在真实业务决策中的应用。原始协作仓库为 [RiaYanvv/project](https://github.com/RiaYanvv/project)。
