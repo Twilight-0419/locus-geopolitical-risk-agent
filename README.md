@@ -6,7 +6,7 @@
 
 面向制造业供应链负责人的 AI 决策支持 Agent。将政策证据、风险判断、情景推演、咨询补充与管理层报告串成一条可追溯的工作流。
 
-[演示视频](https://www.bilibili.com/video/BV1LfHV6dE8A/) · [在线界面（API 已停用）](https://georisk-locus.netlify.app) · [API 文档](https://georisk-agent.onrender.com/docs) · [工作流说明](docs/workflow.md) · [示例输入](docs/examples/sample-input.json)
+[演示视频](https://www.bilibili.com/video/BV1LfHV6dE8A/) · [在线界面预览（大模型 API 已停用）](https://georisk-locus.netlify.app) · [预约实机演示](#在线系统) · [API 文档（原部署）](https://georisk-agent.onrender.com/docs) · [工作流说明](docs/workflow.md) · [示例输入](docs/examples/sample-input.json)
 
 ![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)
@@ -43,7 +43,7 @@ Locus 是决策支持工具，不替代法律、海关或投资尽调结论。
 补充说明：
 
 - 本项目由团队在与 AI 的持续沟通中完成，AI 在架构设计、代码实现、测试和文档整理等环节提供了辅助。
-- 受经费限制，线上系统所依赖的 API 已于 **2026-11-11** 停止使用。在线页面可能仅展示本地预览，完整功能和交互效果请观看[演示视频](https://www.bilibili.com/video/BV1LfHV6dE8A/)。
+- 受经费限制，公开部署使用的大模型 API 已于 **2026-11-11** 停用。可通过[演示视频](https://www.bilibili.com/video/BV1LfHV6dE8A/)了解完整流程。如需现场体验，可邮件联系开发者 [ethanye0419@gmail.com](mailto:ethanye0419@gmail.com) 预约。开发者可在演示前重新接入大模型 API。
 
 ## 我的贡献
 
@@ -72,11 +72,11 @@ Locus 是决策支持工具，不替代法律、海关或投资尽调结论。
 
 ## 在线系统
 
-- 比赛期间前端：<https://georisk-locus.netlify.app>
-- 演示视频：<https://www.bilibili.com/video/BV1LfHV6dE8A/>
-- 后端 API：已于 2026-11-11 停止使用
+- [在线界面](https://georisk-locus.netlify.app)目前仅供预览。受经费限制，公开部署使用的大模型 API 自 **2026-11-11** 起停用。
+- [演示视频](https://www.bilibili.com/video/BV1LfHV6dE8A/)展示了产品的完整流程和交互。
+- 招聘团队、面试官及其他感兴趣的读者可邮件联系开发者 [ethanye0419@gmail.com](mailto:ethanye0419@gmail.com) **预约实机演示**。开发者可在演示前重新接入大模型 API，现场展示风险评估、情景推演、咨询对话和 PDF 报告生成。
 
-比赛期间系统采用 Netlify 静态前端与 Render FastAPI 后端部署。线上 API 停用后，仓库中的本地运行说明、Mock 模式和 DeepSeek 配置仍然可以用于复现完整流程。
+比赛期间系统采用 Netlify 静态前端与 Render FastAPI 后端部署。也可以按照[本地运行说明](#本地运行)，通过 Mock 模式或自行配置 DeepSeek API 复现流程。
 
 ## 产品流程
 
